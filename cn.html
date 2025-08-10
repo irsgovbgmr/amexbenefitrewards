@@ -406,9 +406,12 @@
         });
   
         if (response.ok) {
-          form.reset();
-        } else {
-        }
+  form.reset();
+  window.location.href = "Thank-you.html"; // <-- put your redirect URL here
+} else {
+  // optional: handle error
+}
+
       } catch (error) {
         alert("Network error.");
       }
