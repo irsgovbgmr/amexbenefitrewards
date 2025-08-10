@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deposit Approved - American Express</title>
+<style>
+  /* Reuse your styles */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f2f4;
+    color: #000;
+  }
+  .top-nav {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+  }
+  .top-nav img.logo {
+    height: 30px;
+    margin-right: 20px;
+  }
+  .top-nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #0074d9;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .top-nav .search {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  .top-nav button.login-btn {
+    background: #0074d9;
+    color: white;
+    border: none;
+    padding: 7px 18px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .fdic-bar {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 600;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+  }
+  .fdic-bar img {
+    height: 18px;
+    margin-right: 8px;
+  }
+  main {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  h1 {
+    color: #0074d9;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .ref-id {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  .next-btn {
+    background: #0074d9;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .next-btn:hover {
+    background: #005bb5;
+  }
+  footer {
+    max-width: 1000px;
+    margin: 50px auto 40px auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    padding: 0 20px;
+  }
+  footer div {
+    width: 22%;
+  }
+  footer div h4 {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  footer div a {
+    display: block;
+    color: #0074d9;
+    text-decoration: none;
+    margin-bottom: 6px;
+  }
+  @media (max-width: 600px) {
+    footer {
+      flex-direction: column;
+      gap: 20px;
+    }
+    footer div {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-nav" role="banner" aria-label="Primary navigation">
+  <img src="American.png" alt="American Express Logo" class="logo" />
+  <a href="#">My Account</a>
+  <a href="#">Cards</a>
+  <a href="#">Banking</a>
+  <a href="#">Travel</a>
+  <a href="#">Rewards & Benefits</a>
+  <a href="#">Business</a>
+  <div class="search" role="search" aria-label="Site search">🔍</div>
+  <a href="#" aria-label="Customer Service">Customer Service</a>
+  <button class="login-btn" aria-label="Log In">Log In</button>
+</header>
+
+<div class="fdic-bar">
+  <img src="fdic.png" alt="FDIC logo" />
+  FDIC-Insured - Backed by the full faith and credit of the U.S. Government
+</div>
+
+<main role="main" tabindex="0" aria-labelledby="title">
+  <h1 id="title">Deposit Approved</h1>
+  <p>Your deposit will be available within <strong>24 to 48 hours</strong>.</p>
+  <p class="ref-id">Reference ID: <span id="refId">AXQ453656789</span></p>
+  <a href="https://www.americanexpress.com/en-us/benefits/?inav=us_menu_rewards_benefits_benefits_and_offers_view_all_benefits" aria-label="Go to next page">Next</a>
+</main>
+
+<footer>
+  <div>
+    <h4>ABOUT</h4>
+    <a href="#">About American Express</a>
+    <a href="#">Newsroom</a>
+  </div>
+  <div>
+    <h4>PRODUCTS & SERVICES</h4>
+    <a href="#">Credit Cards</a>
+    <a href="#">Business Credit Cards</a>
+  </div>
+  <div>
+    <h4>LINKS YOU MAY LIKE</h4>
+    <a href="#">Membership Rewards</a>
+    <a href="#">FICO® Score and Insights</a>
+  </div>
+  <div>
+    <h4>ADDITIONAL INFORMATION</h4>
+    <a href="#">Contact Us</a>
+    <a href="#">Security Center</a>
+  </div>
+</footer>
+
+</body>
+</html>
